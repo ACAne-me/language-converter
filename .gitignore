@@ -1,0 +1,14 @@
+# Node
+frontend/node_modules
+frontend/.next
+frontend/.env.local
+
+# Python
+backend-fastapi/.venv
+backend-fastapi/__pycache__
+backend-fastapi/*.pyc
+
+# General
+.DS_Store
+.vscode
+.env
