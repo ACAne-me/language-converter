@@ -29,5 +29,5 @@ COPY . .
 ENV MECABRC=""
 ENV MECAB_DICDIR="/usr/lib/x86_64-linux-gnu/mecab/dic/ipadic"
 
-# 启动FastAPI服务器
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# 启动FastAPI服务器 - 添加详细日志
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--log-level", "debug"]

@@ -34,7 +34,7 @@ export default function LanguageConverter() {
           Language Converter
         </h1>
         <p className="text-gray-600 dark:text-gray-300 text-lg">
-          英語や中国語を日本語とローマ字に変換します
+          中国語を日本語に変換します
         </p>
       </div>
 
@@ -45,7 +45,7 @@ export default function LanguageConverter() {
           <textarea
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
-            placeholder="ここに英語または中国語のテキストを入力してください..."
+            placeholder="ここに中国語のテキストを入力してください..."
             className="w-full min-h-[120px] p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200 resize-none bg-gray-50 dark:bg-gray-700 dark:text-white"
           />
           <button 
@@ -78,7 +78,7 @@ export default function LanguageConverter() {
               </div>
               <div>
                 <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">ローマ字</h3>
-                <div className="text-base font-mono text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 p-3 rounded-md">
+                <div className="text-lg md:text-xl leading-relaxed text-gray-900 dark:text-white font-medium">
                   {result.romaji}
                 </div>
               </div>
