@@ -1,4 +1,8 @@
 fastapi
 uvicorn[standard]
 python-multipart
-# 生产中加入: fugashi, ipadic, romkan, transformers, sentencepiece 等
+fugashi
+unidic-lite
+romkan
+googletrans==4.0.0-rc1
+requests
