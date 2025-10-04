@@ -4,5 +4,5 @@ python-multipart
 fugashi
 unidic-lite
 romkan
-googletrans==4.0.0-rc1
+deep_translator
 requests

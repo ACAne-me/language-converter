@@ -1,6 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import os
+import importlib
 
 app = FastAPI(title="Language Converter (FastAPI)")
 
@@ -20,18 +22,30 @@ class ConvertRequest(BaseModel):
 
 @app.post("/convert")
 async def convert(req: ConvertRequest):
-    # 1. 翻訳エンジンの統合（例：Google Translate APIを使用）
-    from googletrans import Translator
-    translator = Translator()
-    translated_text = translator.translate(req.text, src=req.source, dest=req.target).text
-    
-    # 2. カタカナ/漢字読みの処理（fugashi/MeCabを使用）
-    import fugashi
-    tagger = fugashi.GenericTagger()
-    # ... カタカナ変換の処理 ...
-    
-    # 3. ローマ字変換（romkanを使用）
-    import romkan
-    romaji = romkan.to_hepburn(translated_text)  # ヘボン式に変換
-    
-    return {"text": translated_text, "romaji": romaji}
+    try:
+        # 1. 使用deep_translator代替googletrans进行翻译
+        from deep_translator import GoogleTranslator
+        translator = GoogleTranslator(source=req.source, target=req.target)
+        translated_text = translator.translate(req.text)
+        
+        # 2. カタカナ/漢字読みの処理（fugashi/MeCabを使用）
+        import fugashi
+        # 动态获取unidic_lite字典路径
+        try:
+            # 尝试获取unidic_lite的安装路径
+            import unidic_lite
+            dicdir = os.path.join(os.path.dirname(unidic_lite.__file__), "dicdir")
+            tagger = fugashi.GenericTagger(f"-d {dicdir}")
+        except Exception:
+            # 如果获取路径失败，尝试不指定路径启动
+            tagger = fugashi.GenericTagger()
+        
+        # 3. ローマ字変換（romkanを使用）
+        import romkan
+        romaji = romkan.to_hepburn(translated_text)  # ヘボン式に変換
+        
+        return {"text": translated_text, "romaji": romaji}
+        
+    except Exception as e:
+        # 添加错误处理
+        raise HTTPException(status_code=500, detail=f"Conversion error: {str(e)}")
