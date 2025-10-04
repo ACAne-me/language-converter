@@ -1,6 +1,6 @@
 # 中国姓氏到日语发音的映射 - 尽可能包含所有常见姓氏
 chinese_surname_map = {
-    # 中国前100大姓氏
+    # Top 100 common Chinese surnames
     '王': 'オウ', '李': 'リ', '张': 'チョウ', '刘': 'リュウ', '陈': 'チン',
     '杨': 'ウウ', '黄': 'コウ', '赵': 'チョウ', '周': 'シュウ', '吴': 'ゴ',
     '徐': 'ジョ', '孙': 'ソン', '胡': 'コ', '朱': 'シュ', '高': 'コウ',
@@ -22,14 +22,14 @@ chinese_surname_map = {
     '尹': 'イン', '黎': 'レイ', '易': 'イ', '常': 'ジョウ', '武': 'ブ',
     '乔': 'キョウ', '贺': 'ガ', '赖': 'ライ', '龚': 'キョウ', '文': 'ブン',
     
-    # 复姓
+    # Compound surnames
     '欧阳': 'オウヨウ', '上官': 'ジョウカン', '司马': 'シバ', '诸葛': 'ショカツ',
     '司徒': 'シト', '司空': 'シクウ', '公孙': 'コウソン', '东方': 'トウホウ',
     '皇甫': 'コウホ', '尉迟': 'イチ', '公羊': 'コウヨウ', '澹台': 'タンダイ',
     '申屠': 'シント', '太叔': 'タイシュク', '轩辕': 'ケンエン', '令狐': 'レイコ',
     '钟离': 'チュウリ', '宇文': 'ウンブン', '长孙': 'チョウソン', '慕容': 'ボクヨウ',
     
-    # 少数民族常见姓氏
+    # Common surnames of ethnic minorities
     '阿': 'ア', '艾': 'ガイ', '白': 'ハク', '拜': 'ハイ', '包': 'ホウ',
     '曹': 'ソウ', '达': 'タツ', '德': 'トク', '董': 'トウ', '多': 'タ',
     '额': 'ガク', '鄂': 'ガク', '范': 'ハン', '方': 'ホウ', '傅': 'フ',
@@ -62,9 +62,9 @@ chinese_surname_map = {
     '庄': 'ソウ', '卓': 'タク', '宗': 'ソウ', '邹': 'スウ',
 }
 
-# 中国常见名字到日语发音的映射
+# Common Chinese given names to Japanese pronunciation mapping
 chinese_given_name_map = {
-    # 常见单字名
+    # Common single-character given names
     '伟': 'イ', '芳': 'ホウ', '娜': 'ナ', '秀英': 'シュウエイ',
     '敏': 'ビン', '静': 'セイ', '强': 'キョウ', '磊': 'ライ',
     '军': 'グン', '洋': 'ヨウ', '勇': 'ユウ', '杰': 'ケツ',
@@ -87,9 +87,9 @@ chinese_given_name_map = {
     '龙': 'リュウ', '虎': 'コ', '狮': 'シ', '豹': 'ヒョウ',
     '熊': 'ユウ', '鹰': 'ヨウ', '鹤': 'カク', '麟': 'リン',
     '凤': 'ホウ', '凰': 'オウ', '鸳': 'エン', '鸯': 'オウ',
-    '耀': 'ヨウ',  # 添加'耀'字的映射
+    '耀': 'ヨウ',  # Added '耀' character mapping
     
-    # 常见双字名
+    # Common two-character given names
     '建国': 'ケンコク', '建军': 'ケングン', '建伟': 'ケンイ',
     '红梅': 'コウバイ', '秀丽': 'シュウレイ', '志强': 'シキョウ',
     '文静': 'ブンセイ', '小明': 'ショウメイ', '小红': 'ショウコウ',
@@ -114,7 +114,7 @@ chinese_given_name_map = {
     '秀玉': 'シュウギョク', '秀珍': 'シュウチン', '秀珠': 'シュウシュ',
     '秀芬': 'シュウフン', '秀燕': 'シュウエン', '秀玲': 'シュウレイ',
     
-    # 偏门名字
+    # Uncommon names
     '喆': 'テツ', '垚': 'ギョウ', '焱': 'エン', '淼': 'ビョウ',
     '鑫': 'キン', '森': 'シン', '品': 'ヒン', '犇': 'ホン',
     '骉': 'ビョウ', '羴': 'セン', '猋': 'ヒョウ', '麤': 'ソ',
@@ -131,9 +131,9 @@ chinese_given_name_map = {
     '龖': 'タツ', '鱻': 'セン', '灥': 'セン', '靐': 'ヘイ',
 }
 
-# 汉字拼音映射（用于字符级别音译）
+# Chinese pinyin mapping (for character-level transliteration)
 chinese_pinyin_map = {
-    # 声母对应表
+    # Initial consonants mapping
     'b': 'バ', 'p': 'パ', 'm': 'マ', 'f': 'フ',
     'd': 'ダ', 't': 'タ', 'n': 'ナ', 'l': 'ラ',
     'g': 'ガ', 'k': 'カ', 'h': 'ハ',
@@ -142,7 +142,7 @@ chinese_pinyin_map = {
     'z': 'ズ', 'c': 'ツ', 's': 'ス',
     'y': 'ヤ', 'w': 'ワ',
     
-    # 韵母对应表（简化版）
+    # Finals mapping (simplified version)
     'a': 'ア', 'o': 'オ', 'e': 'エ', 'i': 'イ',
     'u': 'ウ', 'v': 'ヴ', 'ai': 'アイ', 'ei': 'エイ',
     'ui': 'ウイ', 'ao': 'アオ', 'ou': 'オウ', 'iu': 'イウ',
@@ -151,36 +151,36 @@ chinese_pinyin_map = {
     'ang': 'アング', 'eng': 'エング', 'ing': 'イング', 'ong': 'オング',
 }
 
-# 获取名字的日语发音
+# Get Japanese pronunciation of a name
 def get_japanese_pronunciation(name):
-    # 首先检查完整名字是否在名字映射表中
+    # First check if the full name is in the given name mapping
     if name in chinese_given_name_map:
         return chinese_given_name_map[name]
     
-    # 检查姓氏是否在姓氏映射表中（适用于全名）
+    # Check if the surname is in the surname mapping (for full names)
     if len(name) >= 2:
         surname = name[0]
         if surname in chinese_surname_map:
-            # 处理姓氏
+            # Process surname
             result = chinese_surname_map[surname]
-            # 处理名字部分
+            # Process given name part
             given_name = name[1:]
-            # 检查整个名字部分是否在映射表中
+            # Check if the entire given name part is in the mapping
             if given_name in chinese_given_name_map:
                 result += chinese_given_name_map[given_name]
             else:
-                # 逐字处理名字部分 - 同时检查given_name_map和surname_map
+                # Process given name character by character - check both given_name_map and surname_map
                 for char in given_name:
                     if char in chinese_given_name_map:
                         result += chinese_given_name_map[char]
                     elif char in chinese_surname_map:
                         result += chinese_surname_map[char]
                     else:
-                        # 如果有单个字不在映射表中，尝试拼音转假名
+                        # If a character is not in the mapping, try pinyin to kana transliteration
                         result += transliterate_based_on_pinyin(char)
             return result
     
-    # 检查名字的每个字是否在映射表中（适用于单字名或复姓）
+    # Check each character of the name in the mapping (for single-character names or compound surnames)
     result = ''
     for char in name:
         if char in chinese_given_name_map:
@@ -188,17 +188,17 @@ def get_japanese_pronunciation(name):
         elif char in chinese_surname_map:
             result += chinese_surname_map[char]
         else:
-            # 如果有单个字不在映射表中，尝试拼音转假名
+            # If a character is not in the mapping, try pinyin to kana transliteration
             result += transliterate_based_on_pinyin(char)
     
     return result if result else name
 
-# 基于拼音的字符级别音译（作为最后后备方案）
+# Character-level transliteration based on pinyin (as last fallback)
 def transliterate_based_on_pinyin(name):
-    # 简单的汉字转假名规则，基于常见发音模式
-    # 这里使用一个简化的规则，实际应用中可能需要更复杂的规则
+    # Simple Chinese character to kana rules, based on common pronunciation patterns
+    # A simplified rule is used here; more complex rules may be needed in practical applications
     
-    # 常见汉字到假名的直接映射（作为补充）
+    # Direct mapping of common Chinese characters to kana (as supplement)
     direct_map = {
         '一': 'イチ', '二': 'ニ', '三': 'サン', '四': 'シ', '五': 'ゴ',
         '六': 'ロク', '七': 'シチ', '八': 'ハチ', '九': 'キュウ', '十': 'ジュウ',
@@ -218,7 +218,7 @@ def transliterate_based_on_pinyin(name):
         if char in direct_map:
             result += direct_map[char]
         else:
-            # 对于没有直接映射的字符，保留原字符
+            # For characters without direct mapping, keep the original character
             result += char
     
     return result
